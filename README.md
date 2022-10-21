@@ -34,3 +34,4 @@
 
 ![Screenshot_29](https://user-images.githubusercontent.com/76990310/197162353-fb72753e-c14e-45c1-87b8-22c7e90e48ef.png)
 
+Made possible by <a href="https://www.odoo.com/">Odoo</a>
