@@ -1,7 +1,7 @@
 {
-    "name": "BOSNET Employee Database",
+    "name": "Dream-Gen HR",
     "author": "Mohamad Fhatir",
-    "website": "https://bosnetdis.com",
+    "website": "https://fhatir.my.id",
     "version": "1.0.0",
     "depends": [
         "hr",
