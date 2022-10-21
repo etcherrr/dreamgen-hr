@@ -25,7 +25,7 @@
 <li>Detailed Private Information</li>
 </ol>
 <p>-. Avatar / Pas foto</p>
-<p>-. Employee Birthday Notification via Email And Chat</p>
+<p>-. Employee Birthday Notification via Email And Chat</p> forked from <a href="https://github.com/rauferdeveloper/reminder_birthday">rauferdeveloper/reminder_birthday</a>
 
 ![Screenshot_32](https://user-images.githubusercontent.com/76990310/197162360-c99a519a-1400-43b6-9641-a99b14b9f984.png)
 
