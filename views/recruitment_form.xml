@@ -1,0 +1,197 @@
+<odoo>
+    <data>
+        <record id="hr_applicant_view_form" model="ir.ui.view">
+            <field name="name">Jobs - Recruitment Form</field>
+            <field name="model">hr.applicant</field>
+            <field name="inherit_id" ref="hr_recruitment.hr_applicant_view_form"/>
+            <field name="arch" type="xml">
+              <xpath expr="//button[@name='create_employee_from_applicant']" position="attributes">            
+                  <attribute name="invisible">1</attribute>        
+              </xpath>
+              <xpath expr="//button[@name='archive_applicant']" position="after">            
+                  <button string="Create Employee" name="create_employee_data" type="object" data-hotkey="v" class="oe_highlight o_create_employee" attrs="{'invisible': ['|',('emp_id', '!=', False),('active', '=', False)]}"/>
+              </xpath>
+              <xpath expr="//widget[@name='web_ribbon']" position="after"> 
+                        <!-- <field name="avatar_128" invisible="1"/> -->
+                        <field name="pasfoto" widget="image" class="oe_avatar"/>
+              </xpath>
+              <xpath expr="//field[@name='priority']" position="after">
+                <field name="gender"/>
+                <field name="sumber"/>
+              </xpath>
+              <xpath expr="//field[@name='type_id']" position="attributes">
+                <attribute name="invisible">1</attribute>
+              </xpath>
+              <xpath expr="//field[@name='type_id']" position="after">
+                  <field name="jenjang1"/>
+              </xpath>
+              <xpath expr="//page[1]" position="before">
+                              <page string="Education Information">
+                              <group>
+                                    <group string="Pendidikan 1">
+                                      <field name="jenjang1" />
+                                      <field name="namasekolah1"/>
+                                      <field name="jurusan" />
+                                      <field name="kelulusan"/>
+                                      <field name="tglmasukunv"/>
+                                      <field name="tgllulus"/>
+                                      <field name="ipk" />
+                                    </group>
+                                    <group string="Pendidikan 2">
+                                      <field name="jenjang2" />
+                                      <field name="namasekolah2" />
+                                      <field name="jurusan2" />
+                                      <field name="kelulusan2"/>
+                                      <field name="tglmasukunv2"/>
+                                      <field name="tgllulus2"/>
+                                      <field name="ipk2" />
+                                    </group>
+                                    <group string="Pendidikan 3">
+                                      <field name="jenjang3" />
+                                      <field name="namasekolah3" />
+                                      <field name="jurusan3" />
+                                      <field name="kelulusan3"/>
+                                      <field name="tglmasukunv3"/>
+                                      <field name="tgllulus3"/>
+                                      <field name="ipk3"/>
+                                    </group>
+                              </group>
+                              </page>
+                              <page string="Company Hystory">
+                              <group>
+                                    <group string="Company 1">
+                                      <field name="namaperusahaan1"/>
+                                      <field name="industri1" />
+                                      <field name="jabatan1"/>
+                                      <field name="status1"/>
+                                      <field name="jobdesc1"/>
+                                      <field name="tglmasukperusahaan1"/>
+                                      <field name="tglresign1"/>
+                                      <field name="reason1"/>
+                                      <field name="salary1"/>
+                                    </group>
+                                    <group string="Company 2">
+                                      <field name="namaperusahaan2"/>
+                                      <field name="industri2" />
+                                      <field name="jabatan2"/>
+                                      <field name="status2"/>
+                                      <field name="jobdesc2"/>
+                                      <field name="tglmasukperusahaan2"/>
+                                      <field name="tglresign2"/>
+                                      <field name="reason2"/>
+                                      <field name="salary2"/>
+                                    </group>
+                                    <group string="Company 3">
+                                      <field name="namaperusahaan3"/>
+                                      <field name="industri3" />
+                                      <field name="jabatan3"/>
+                                      <field name="status3"/>
+                                      <field name="jobdesc3"/>
+                                      <field name="tglmasukperusahaan3"/>
+                                      <field name="tglresign3"/>
+                                      <field name="reason3"/>
+                                      <field name="salary3"/>
+                                    </group>
+                                    <group string="Refrensi Kerja">
+                                      <field name="namarefrensi1"/>
+                                      <field name="notelprefrensi1"/>
+                                      <field name="hubunganref1"/>
+                                      <field name="namarefrensi2"/>
+                                      <field name="notelprefrensi2"/>
+                                      <field name="hubunganref2"/>
+                                    </group>
+                              </group>
+                              </page>
+                              <page string="Private Information">
+                                    <group string="Private Information">
+                                      <field name="tempatlahir" placeholder="Tempat Lahir"/>
+                                      <field name="tanggallahir" placeholder="Tanggal Lahir"/>
+                                      <field name="agama" placeholder="Religion"/>
+                                      <field name="nomorktp" placeholder="317401030XXXXXXX"/>
+                                      <field name="alamatktp" placeholder="JL A No 7"/>
+                                      <field name="alamatsaatini" placeholder="JL B No 7"/>
+                                      <field name="emergencycontact" placeholder="Jhon / Ayah"/>
+                                      <field name="emergencyphone" placeholder="0812xxxxxxx"/>
+                                    </group>
+                              </page>
+                              <page string="Skill Information">
+                                    <group>
+                                      <group string="Bahasa">
+                                        <field name="bhsindtulis"/>
+                                        <field name="bhsindlisan"/>
+                                        <field name="bhsingtulis"/>
+                                        <field name="bhsinglisan"/>
+                                      </group>
+                                      <group string="Software">
+                                        <field name="word"/>
+                                        <field name="excel"/>
+                                        <field name="powerpoint"/>
+                                        <field name="outlook"/>
+                                      </group>
+                                      <group string="Programming Language">
+                                        <field name="csharp"/>
+                                        <field name="vb"/>
+                                        <field name="java"/>
+                                        <field name="objc"/>
+                                        <field name="python"/>
+                                        <field name="php"/>
+                                        <field name="ruby"/>
+                                      </group>
+                                      <group string="Platform/Application Server">
+                                        <field name="sharepoint"/>
+                                        <field name="websphere"/>
+                                        <field name="tomcat"/>
+                                        <field name="glassfish"/>
+                                      </group>
+                                      <group string="Mobile Programming">
+                                        <field name="android"/>
+                                        <field name="ios"/>
+                                      </group>
+                                    </group>
+                              </page>
+                              <page string="Family Information">
+                                    <group>
+                                      <group string="Informasi Ayah">
+                                        <field name="namaayah" />
+                                        <field name="tgllahirayah" />
+                                        <field name="pekerjaanayah" placeholder="Wiraswasta"/>
+                                        <field name="pendidikanayah" />
+                                      </group>
+                                      <group string="Informasi Ibu">
+                                        <field name="namaibu" />
+                                        <field name="tgllahiribu" />
+                                        <field name="pekerjaanibu" />
+                                        <field name="pendidikanibu" placeholder="Wiraswasta"/>
+                                      </group> 
+                                      <group string="Informasi Saudara Kandung">
+                                        <field name="anakke" placeholder="1"/>
+                                        <field name="daribsdr" placeholder="2"/>
+                                      </group>
+                                      <group string="Informasi Keluarga Inti">
+                                        <field name='marital'/>
+                                        <field name="namapasangan"/>
+                                        <field name="tgllahirpasangan"/>
+                                        <field name="pekpasangan"/>
+                                        <field name="pendpasangan"/> 
+                                        <field name="jumlahanak"/>
+                                      </group>
+                                    </group>
+                              </page>
+                              <page string="Other Information">
+                                <group>
+                                      <field name="psikotestconfirm"/>
+                                      <field name="kontrakkerjaterakhir"/>
+                                      <field name="hubrekankerjaterakhir"/>
+                                      <field name="penghasilanlain"/>
+                                      <field name="penyakitkronis"/>
+                                      <field name="perdin"/>
+                                      <field name="penempatanluarkota"/>
+                                      <field name="salary_expected"/>
+                                </group>
+                              </page>
+
+              </xpath>
+            </field>
+        </record>
+    </data>
+</odoo>

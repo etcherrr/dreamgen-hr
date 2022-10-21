@@ -1,0 +1,1547 @@
+<odoo>
+    <data>
+            <function model="ir.model.fields" name="formbuilder_whitelist">
+                <value>hr.applicant</value>
+                <value eval="[
+                    'nomorktp', 'pasfoto', 'sumber', 'tempatlahir', 'tanggallahir', 
+                    'gender', 'agama', 'alamatktp', 'alamatsaatini', 
+                    'emergencycontact', 'tanggallahir', 'tanggallahir', 'tanggallahir', 
+                    'tanggallahir', 'emergencyphone', 'namaayah', 'tgllahirayah', 'pekerjaanayah', 
+                    'pendidikanayah', 'namaibu', 'namaayah', 'jenjang1', 'jenjang2', 'jenjang3', 
+                    'tgllahiribu', 'pekerjaanibu', 
+                    'pendidikanibu', 'anakke', 'daribsdr', 'marital', 'namapasangan', 
+                    'tgllahirpasangan', 'pendpasangan', 'pekpasangan', 'jumlahanak', 'namasekolah1', 
+                    'jurusan', 'kelulusan', 'tglmasukunv', 'tgllulus', 'ipk', 
+                    'namasekolah2', 'jurusan2', 'kelulusan2', 'tglmasukunv2', 'tgllulus2', 
+                    'ipk2', 'namasekolah3', 'jurusan3', 'kelulusan3', 'tglmasukunv3', 
+                    'tgllulus3', 'ipk3', 'namaperusahaan1', 'industri1', 'jabatan1', 
+                    'status1', 'jobdesc1', 'tglmasukperusahaan1', 'tglresign1', 'reason1', 
+                    'salary1', 'namaperusahaan2', 'industri2', 'jabatan2', 'status2', 
+                    'jobdesc2', 'tglmasukperusahaan2', 'tglresign2', 'reason2', 'salary2', 
+                    'namaperusahaan3', 'industri3', 'jabatan3', 'status3', 'jobdesc3', 
+                    'tglmasukperusahaan3', 'tglresign3', 'reason3', 'salary3', 'bhsindtulis', 
+                    'bhsindlisan', 'bhsingtulis', 'bhsinglisan', 'word', 'excel', 
+                    'powerpoint', 'outlook', 'csharp', 'asp', 'vb', 
+                    'java', 'objc', 'python', 'php', 'ruby', 'sharepoint', 'websphere',
+                    'tomcat', 'glassfish', 'android', 'ios', 'namarefrensi1', 'notelprefrensi1', 
+                    'hubunganref1', 'namarefrensi2', 'notelprefrensi2', 'hubunganref2', 
+                    'psikotestconfirm', 'kontrakkerjaterakhir', 'hubrekankerjaterakhir', 'penghasilanlain',
+                    'salary_expected', 'penyakitkronis', 'perdin','penempatanluarkota', 'availability'
+                    ]"/>
+            </function>
+        <template id="user_navbar_inherit_website_hr_recruitment" inherit_id="website_hr_recruitment.apply">
+            <xpath expr="//form[@id='hr_recruitment_form']/div/div[1]" position="before">
+                <h1 class="text-center mt-2">Informasi Pribadi</h1>
+            </xpath>
+            <xpath expr="//form[@id='hr_recruitment_form']/div/div[3]" position="after">
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment8">
+                            <span class="s_website_form_label_content">Sumber Lowongan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment8" type="text" class="form-control s_website_form_input" name="sumber" required="" placeholder="Jobstreet"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment9">
+                            <span class="s_website_form_label_content">Nomor KTP</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment9" type="text" class="form-control s_website_form_input" name="nomorktp" required=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment10">
+                            <span class="s_website_form_label_content">Tempat Lahir</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment10" type="text" class="form-control s_website_form_input" name="tempatlahir" required=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment11">
+                            <span class="s_website_form_label_content">Tanggal Lahir</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment11" type="date" class="form-control s_website_form_input" name="tanggallahir" required=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment12">
+                            <span class="s_website_form_label_content">Jenis Kelamin</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment12" class="form-group col-12 s_website_form_field form-control" name="gender"> 
+                            <option value="male">Male</option>
+                            <option value="female">Female</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment13">
+                            <span class="s_website_form_label_content">Agama</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment13" class="form-group col-12 s_website_form_field form-control" name="agama"> 
+                            <option value="islam">Islam</option>
+                            <option value="katolik">Kristen Katolik</option>
+                            <option value="kristen protestan">Kristen Protestan</option>
+                            <option value="hindu">Hindu</option>
+                            <option value="buddha">Buddha</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment14">
+                            <span class="s_website_form_label_content">Alamat Sesuai KTP</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment14" type="text" class="form-control s_website_form_input" name="alamatktp" required=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment15">
+                            <span class="s_website_form_label_content">Alamat Saat ini (Jika Berbeda dari KTP)</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment15" type="text" class="form-control s_website_form_input" name="alamatsaatini" required=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment16">
+                            <span class="s_website_form_label_content">Kontak darurat/Hubungan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment16" type="text" class="form-control s_website_form_input" name="emergencycontact" required="" placeholder="Jhon / Ayah"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment17">
+                            <span class="s_website_form_label_content">Nomor telepon kontak darurat</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment17" type="text" class="form-control s_website_form_input" name="emergencyphone" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div data-visibility-condition="" data-visibility-between="" style="" class="form-group s_website_form_field col-12 s_website_form_custom" data-type="binary" data-name="Field">
+                  <div class="row s_col_no_resize s_col_no_bgcolor">
+                    <label class=" col-sm-auto s_website_form_label " style="width: 200px" for="oxwnaslcla2e">
+                      <span class="s_website_form_label_content">Pas Foto 2x3</span>
+                    </label>
+                    <div class="col-sm">
+                      <input type="file" class="form-control-file s_website_form_input" name="pasfoto" id="oxwnaslcla2e" data-fill-with="undefined"/>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                <h1 class="text-center mt-2">Informasi Keluarga</h1>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment18">
+                            <span class="s_website_form_label_content">Nama Ayah</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment18" type="text" class="form-control s_website_form_input" name="namaayah" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment19">
+                            <span class="s_website_form_label_content">Tanggal lahir Ayah</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment19" type="date" class="form-control s_website_form_input" name="tgllahirayah" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment20">
+                            <span class="s_website_form_label_content">Pendidikan Ayah</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment20" class="form-group col-12 s_website_form_field form-control" name="pendidikanayah">
+                            <option value="doktor">Doktor</option>
+                            <option value="master">Master</option>
+                            <option value="sarjana">Sarjana</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="sma">SMA</option>
+                            <option value="smp">SMP</option>
+                            <option value="sd">SD</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment21">
+                            <span class="s_website_form_label_content">Pekerjaan Ayah</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment21" type="text" class="form-control s_website_form_input" name="pekerjaanayah" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment22">
+                            <span class="s_website_form_label_content">Nama Ibu</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment22" type="text" class="form-control s_website_form_input" name="namaibu" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment23">
+                            <span class="s_website_form_label_content">Tanggal lahir Ibu</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment23" type="date" class="form-control s_website_form_input" name="tgllahiribu" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment24">
+                            <span class="s_website_form_label_content">Pendidikan Ibu</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment24" class="form-group col-12 s_website_form_field form-control" name="pendidikanibu">
+                            <option value="doktor">Doktor</option>
+                            <option value="master">Master</option>
+                            <option value="sarjana">Sarjana</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="sma">SMA</option>
+                            <option value="smp">SMP</option>
+                            <option value="sd">SD</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment25">
+                            <span class="s_website_form_label_content">Pekerjaan Ibu</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment25" type="text" class="form-control s_website_form_input" name="pekerjaanibu" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="integer" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment26">
+                            <span class="s_website_form_label_content">Anak ke ...</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment26" type="integer" class="form-control s_website_form_input" name="anakke" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="integer" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment27">
+                            <span class="s_website_form_label_content">Dari ... bersaudara</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment27" type="integer" class="form-control s_website_form_input" name="daribsdr" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment28">
+                            <span class="s_website_form_label_content">Marital</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment28" class="form-group col-12 s_website_form_field form-control" name="marital"> 
+                            <option value="single">Single</option>
+                            <option value="married">Married</option>
+                            <option value="divorced">Divorced</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="integer" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment29">
+                            <span class="s_website_form_label_content">Jumlah anak</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment29" type="integer" class="form-control s_website_form_input" name="jumlahanak" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment30">
+                            <span class="s_website_form_label_content">Nama Pasangan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment30" type="text" class="form-control s_website_form_input" name="namapasangan" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment31">
+                            <span class="s_website_form_label_content">Tanggal lahir Pasangan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment31" type="date" class="form-control s_website_form_input" name="tgllahirpasangan" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment32">
+                            <span class="s_website_form_label_content">Pendidikan Pasangan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment32" class="form-group col-12 s_website_form_field form-control" name="pendpasangan">
+                            <option value="doktor">Doktor</option>
+                            <option value="master">Master</option>
+                            <option value="sarjana">Sarjana</option>
+                            <option value="diploma">Diploma</option>
+                            <option value="sma">SMA</option>
+                            <option value="smp">SMP</option>
+                            <option value="sd">SD</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment33">
+                            <span class="s_website_form_label_content">Pekerjaan Pasangan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment33" type="text" class="form-control s_website_form_input" name="pekpasangan" required="" />
+                        </div>
+                    </div>
+                </div>
+                <h1 class="text-center mt-2">Informasi Pendidikan</h1>
+                <div class="col-sm" style="padding-left:0px !important;">            
+                    <p style="font-size: 12px">(Diurutkan dari paling tinggi ke terendah)</p>        
+                </div>
+                <!--FIRST EDU-->
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment34">
+                            <span class="s_website_form_label_content">Jenjang Pendidikan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment34" type="text" class="form-control s_website_form_input" name="jenjang1" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment35">
+                            <span class="s_website_form_label_content">Nama Institusi</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment35" type="text" class="form-control s_website_form_input" name="namasekolah1" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment36">
+                            <span class="s_website_form_label_content">Jurusan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment36" type="text" class="form-control s_website_form_input" name="jurusan" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment37">
+                            <span class="s_website_form_label_content">Status Kelulusan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment37" class="form-group col-12 s_website_form_field form-control" name="kelulusan">
+                            <option value="lulus">Lulus</option>
+                            <option value="belum lulus">Belum Lulus</option>
+                            <option value="tidak dilanjutkan">Tidak Dilanjutkan</option>
+                            <option value="drop out">Drop Out</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment38">
+                            <span class="s_website_form_label_content">Tanggal Masuk</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment38" type="date" class="form-control s_website_form_input" name="tglmasukunv" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment39">
+                            <span class="s_website_form_label_content">Tanggal Lulus</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment39" type="date" class="form-control s_website_form_input" name="tgllulus"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment40">
+                            <span class="s_website_form_label_content">IPK / NEM</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment40" type="text" class="form-control s_website_form_input" name="ipk" />
+                        </div>
+                    </div>
+                </div>
+                <!--END OF 1ST EDU-->
+                <!--2 EDU-->
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment41">
+                            <span class="s_website_form_label_content">Jenjang Pendidikan2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment41" type="text" class="form-control s_website_form_input" name="jenjang2" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment42">
+                            <span class="s_website_form_label_content">Nama Institusi 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment42" type="text" class="form-control s_website_form_input" name="namasekolah2" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment43">
+                            <span class="s_website_form_label_content">Jurusan 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment43" type="text" class="form-control s_website_form_input" name="jurusan2" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment44">
+                            <span class="s_website_form_label_content">Status Kelulusan 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment44" class="form-group col-12 s_website_form_field form-control" name="kelulusan2">
+                            <option value="lulus">Lulus</option>
+                            <option value="belum lulus">Belum Lulus</option>
+                            <option value="tidak dilanjutkan">Tidak Dilanjutkan</option>
+                            <option value="drop out">Drop Out</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment45">
+                            <span class="s_website_form_label_content">Tanggal Masuk 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment45" type="date" class="form-control s_website_form_input" name="tglmasukunv2" required="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment46">
+                            <span class="s_website_form_label_content">Tanggal Lulus 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment46" type="date" class="form-control s_website_form_input" name="tgllulus2"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment47">
+                            <span class="s_website_form_label_content">IPK / NEM 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment47" type="text" class="form-control s_website_form_input" name="ipk2" />
+                        </div>
+                    </div>
+                </div>
+                <!--END OF 2ND EDU-->
+                <!--3RD EDU-->
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment48">
+                            <span class="s_website_form_label_content">Jenjang Pendidikan 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment48" type="text" class="form-control s_website_form_input" name="jenjang3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment49">
+                            <span class="s_website_form_label_content">Nama Institusi 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment49" type="text" class="form-control s_website_form_input" name="namasekolah3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment50">
+                            <span class="s_website_form_label_content">Jurusan 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment50" type="text" class="form-control s_website_form_input" name="jurusan3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment51">
+                            <span class="s_website_form_label_content">Status Kelulusan 3</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment51" class="form-group col-12 s_website_form_field form-control" name="kelulusan3">
+                            <option value="none">None</option>
+                            <option value="lulus">Lulus</option>
+                            <option value="belum lulus">Belum Lulus</option>
+                            <option value="tidak dilanjutkan">Tidak Dilanjutkan</option>
+                            <option value="drop out">Drop Out</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment52">
+                            <span class="s_website_form_label_content">Tanggal Masuk 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment52" type="date" class="form-control s_website_form_input" name="tglmasukunv3"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment53">
+                            <span class="s_website_form_label_content">Tanggal Lulus 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment53" type="date" class="form-control s_website_form_input" name="tgllulus3"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment54">
+                            <span class="s_website_form_label_content">IPK / NEM 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment54" type="text" class="form-control s_website_form_input" name="ipk3" />
+                        </div>
+                    </div>
+                </div>
+                <!--END OF 3RD EDU-->
+                <h1 class="text-center mt-2">Riwayat Pekerjaan</h1>
+                <!--FIRST Work-->
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment55">
+                            <span class="s_website_form_label_content">Nama Perusahaan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment55" type="text" class="form-control s_website_form_input" name="namaperusahaan1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment56">
+                            <span class="s_website_form_label_content">Industri</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment56" type="text" class="form-control s_website_form_input" name="industri1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment57">
+                            <span class="s_website_form_label_content">Jabatan</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment57" type="text" class="form-control s_website_form_input" name="jabatan1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment58">
+                            <span class="s_website_form_label_content">Status</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment58" class="form-group col-12 s_website_form_field form-control" name="status1">
+                            <option value="none">None</option>
+                            <option value="aktif">Aktif</option>
+                            <option value="resign">Resign</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment58">
+                            <span class="s_website_form_label_content">Job Desc</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment58" type="text" class="form-control s_website_form_input" name="jobdesc1" placeholder="Contoh : 1. Membuat.... 2. Menyapkan... 3. Melakukan..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment59">
+                            <span class="s_website_form_label_content">Tanggal Masuk</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment59" type="date" class="form-control s_website_form_input" name="tglmasukperusahaan1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment60">
+                            <span class="s_website_form_label_content">Tanggal Resign</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment60" type="date" class="form-control s_website_form_input" name="tglresign1"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment61">
+                            <span class="s_website_form_label_content">Alasan Keluar</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment61" type="text" class="form-control s_website_form_input" name="reason1"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment61">
+                            <span class="s_website_form_label_content">Take Home Pay</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment61" type="text" class="form-control s_website_form_input" name="salary1"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF FIRST Work-->
+                <!--2 Work-->
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment62">
+                            <span class="s_website_form_label_content">Nama Perusahaan 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment62" type="text" class="form-control s_website_form_input" name="namaperusahaan2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment63">
+                            <span class="s_website_form_label_content">Industri 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment63" type="text" class="form-control s_website_form_input" name="industri2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment64">
+                            <span class="s_website_form_label_content">Jabatan 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment64" type="text" class="form-control s_website_form_input" name="jabatan2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment65">
+                            <span class="s_website_form_label_content">Status 2</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment65" class="form-group col-12 s_website_form_field form-control" name="status2">
+                            <option value="none">None</option>
+                            <option value="aktif">Aktif</option>
+                            <option value="resign">Resign</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment66">
+                            <span class="s_website_form_label_content">Job Desc 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment66" type="text" class="form-control s_website_form_input" name="jobdesc2" placeholder="Contoh : 1. Membuat.... 2. Menyapkan... 3. Melakukan..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment67">
+                            <span class="s_website_form_label_content">Tanggal Masuk 2</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment67" type="date" class="form-control s_website_form_input" name="tglmasukperusahaan2"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment68">
+                            <span class="s_website_form_label_content">Tanggal Resign 2</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment68" type="date" class="form-control s_website_form_input" name="tglresign2"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment69">
+                            <span class="s_website_form_label_content">Alasan Keluar 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment69" type="text" class="form-control s_website_form_input" name="reason2"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment70">
+                            <span class="s_website_form_label_content">Take Home Pay 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment70" type="text" class="form-control s_website_form_input" name="salary2"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF 2 Work-->
+                <!-- 3 Work-->
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment71">
+                            <span class="s_website_form_label_content">Nama Perusahaan 3</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment71" type="text" class="form-control s_website_form_input" name="namaperusahaan3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment72">
+                            <span class="s_website_form_label_content">Industri 3</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment72" type="text" class="form-control s_website_form_input" name="industri3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment73">
+                            <span class="s_website_form_label_content">Jabatan 3</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment73" type="text" class="form-control s_website_form_input" name="jabatan3" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment74">
+                            <span class="s_website_form_label_content">Status 3</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment74" class="form-group col-12 s_website_form_field form-control" name="status3">
+                            <option value="none">None</option>
+                            <option value="aktif">Aktif</option>
+                            <option value="resign">Resign</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment75">
+                            <span class="s_website_form_label_content">Job Desc 3</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment75" type="text" class="form-control s_website_form_input" name="jobdesc3" placeholder="Contoh : 1. Membuat.... 2. Menyapkan... 3. Melakukan..." />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment76">
+                            <span class="s_website_form_label_content">Tanggal Masuk 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment76" type="date" class="form-control s_website_form_input" name="tglmasukperusahaan3"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="date" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment77">
+                            <span class="s_website_form_label_content">Tanggal Resign 3</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment77" type="date" class="form-control s_website_form_input" name="tglresign3"/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment78">
+                            <span class="s_website_form_label_content">Alasan Keluar 3</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment78" type="text" class="form-control s_website_form_input" name="reason3"/>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment79">
+                            <span class="s_website_form_label_content">Take Home Pay 3</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment79" type="text" class="form-control s_website_form_input" name="salary3"/>
+                        </div>
+                    </div>
+                </div>
+                <!-- END OF 3 Work-->
+                <div>
+                <h1 class="text-center mt-2">Informasi Keahlian</h1>
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">            
+                    <p style="font-size: 12px;padding-top: 9px;">(Berikan bobot pada masing masing kolom, isi 0 jika tidak pernah menggunakan)</p>        
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">            
+                    <p style="font-size: 16px;padding-top: 9px;">Bahasa</p>        
+                </div> 
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment80">
+                            <span class="s_website_form_label_content">Bahasa Indonesia (Tulis)</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment80" class="form-group col-8 s_website_form_field form-control" name="bhsindtulis">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment81">
+                            <span class="s_website_form_label_content">Bahasa Indonesia (Lisan)</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment81" class="form-group col-8 s_website_form_field form-control" name="bhsindlisan">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment82">
+                            <span class="s_website_form_label_content">Bahasa Inggris (Tulis)</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment82" class="form-group col-8 s_website_form_field form-control" name="bhsingtulis">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment83">
+                            <span class="s_website_form_label_content">Bahasa Inggris (Lisan)</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment83" class="form-group col-8 s_website_form_field form-control" name="bhsinglisan">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">            
+                    <p style="font-size: 16px;padding-top: 9px;">Aplikasi Komputer</p>        
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment84">
+                            <span class="s_website_form_label_content">Microsoft Word</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment84" class="form-group col-8 s_website_form_field form-control" name="word">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment85">
+                            <span class="s_website_form_label_content">Microsoft Excel</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment85" class="form-group col-8 s_website_form_field form-control" name="excel">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment86">
+                            <span class="s_website_form_label_content">Microsoft Powerpoint</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment86" class="form-group col-8 s_website_form_field form-control" name="powerpoint">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment87">
+                            <span class="s_website_form_label_content">Microsoft Outlook</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment87" class="form-group col-8 s_website_form_field form-control" name="outlook">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">            
+                    <p style="font-size: 16px;padding-top: 9px;">Bahasa Pemrograman</p>        
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment88">
+                            <span class="s_website_form_label_content">C#</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment88" class="form-group col-8 s_website_form_field form-control" name="csharp">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment89">
+                            <span class="s_website_form_label_content">ASP/ASP.NET</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment89" class="form-group col-8 s_website_form_field form-control" name="asp">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment90">
+                            <span class="s_website_form_label_content">VB/VB.NET</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment90" class="form-group col-8 s_website_form_field form-control" name="vb">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment91">
+                            <span class="s_website_form_label_content">Java</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment91" class="form-group col-8 s_website_form_field form-control" name="java">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment92">
+                            <span class="s_website_form_label_content">Objective C</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment92" class="form-group col-8 s_website_form_field form-control" name="objc">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment93">
+                            <span class="s_website_form_label_content">Python</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment93" class="form-group col-8 s_website_form_field form-control" name="python">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment94">
+                            <span class="s_website_form_label_content">PHP</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment94" class="form-group col-8 s_website_form_field form-control" name="php">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment95">
+                            <span class="s_website_form_label_content">Ruby</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment95" class="form-group col-8 s_website_form_field form-control" name="ruby">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">      
+                    <p style="font-size: 16px;padding-top: 9px;">Platform/Application Server</p>        
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment96">
+                            <span class="s_website_form_label_content">Microsoft Sharepoint</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment96" class="form-group col-8 s_website_form_field form-control" name="sharepoint">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment97">
+                            <span class="s_website_form_label_content">IBM Websphere</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment97" class="form-group col-8 s_website_form_field form-control" name="websphere">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment98">
+                            <span class="s_website_form_label_content">Apache Tomcat</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment98" class="form-group col-8 s_website_form_field form-control" name="tomcat">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment99">
+                            <span class="s_website_form_label_content">Oracle Glassfish</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment99" class="form-group col-8 s_website_form_field form-control" name="glassfish">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">      
+                    <p style="font-size: 16px;padding-top: 9px;">Mobile APP</p>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment100">
+                            <span class="s_website_form_label_content">Android</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment100" class="form-group col-8 s_website_form_field form-control" name="android">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment101">
+                            <span class="s_website_form_label_content">iOS</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment101" class="form-group col-8 s_website_form_field form-control" name="ios">
+                            <option value="0">0</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <h1 class="text-center mt-2">Refrensi Kerja</h1>
+                </div>
+                <div class="col-md-5" style="padding-left:0px !important;">            
+                    <p style="font-size: 12px;padding-top: 9px;">(Kami berkomitmen untuk TIDAK menghubungi referensi Anda SEBELUM Anda resmi bergabung dengan
+kami. Yang dimaksud dengan referensi adalah orang yang bisa memberikan testimoni mengenai diri Anda.
+Bisa rekan kerja, ex-atasan, rekan bisnis, dll.)</p>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment102">
+                            <span class="s_website_form_label_content">Nama referensi</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment102" type="text" class="form-control s_website_form_input" name="namarefrensi1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment103">
+                            <span class="s_website_form_label_content">Nomor telepon refrensi</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment103" type="text" class="form-control s_website_form_input" name="notelprefrensi1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment104">
+                            <span class="s_website_form_label_content">Hubungan refrensi</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment104" type="text" class="form-control s_website_form_input" name="hubunganref1" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment105">
+                            <span class="s_website_form_label_content">Nama refrensi 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment105" type="text" class="form-control s_website_form_input" name="namarefrensi2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment106">
+                            <span class="s_website_form_label_content">No telepon refrensi 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment106" type="text" class="form-control s_website_form_input" name="notelprefrensi2" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment107">
+                            <span class="s_website_form_label_content">Hubungan refrensi 2</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment107" type="text" class="form-control s_website_form_input" name="hubunganref2" />
+                        </div>
+                    </div>
+                </div>
+                <div>
+                <h1 class="text-center mt-2">Informasi Tambahan</h1>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment108">
+                            <span class="s_website_form_label_content">Apakah Anda pernah mengikuti psikotes sebelumnya? Bila pernah tahun berapa? Untuk keperluan apa?</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment108" type="text" class="form-control s_website_form_input" name="psikotestconfirm" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment109">
+                            <span class="s_website_form_label_content">Apakah Anda terikat kontrak dengan tempat kerja Anda saat ini?</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment109" class="form-group col-8 s_website_form_field form-control" name="kontrakkerjaterakhir">
+                            <option value="ya">Ya</option>
+                            <option value="tidak" selected="selected">Tidak</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment109">
+                            <span class="s_website_form_label_content">Apakah Anda keberatan apabila kami menghubungi tempat kerja Anda sebelumnya?</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment109" class="form-group col-8 s_website_form_field form-control" name="hubrekankerjaterakhir">
+                            <option value="ya">Ya, saya keberatan</option>
+                            <option value="tidak" selected="selected">Tidak, saya tidak keberatan</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment110">
+                            <span class="s_website_form_label_content">Apakah Anda memiliki pekerjaan sampingan ataupun penghasilan di luar kantor? Mohon dijelaskan.</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment110" type="text" class="form-control s_website_form_input" name="penghasilanlain" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment111">
+                            <span class="s_website_form_label_content">Apakah Anda pernah mengalami sakit kronis/terlibat kecelakaan ataupun operasi besar? Bila ya, mohon dijelaskan kenapa dan kapan.</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment111" type="text" class="form-control s_website_form_input" name="penyakitkronis" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment112">
+                            <span class="s_website_form_label_content">Apakah Anda bersedia melakukan perjalanan dinas ke luar kota?</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment112" class="form-group col-8 s_website_form_field form-control" name="perdin">
+                            <option value="ya">Ya</option>
+                            <option value="tidak" selected="selected">Tidak</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment113">
+                            <span class="s_website_form_label_content">Apakah Anda bersedia ditempatkan di luar kota?</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment113" class="form-group col-8 s_website_form_field form-control" name="penempatanluarkota">
+                            <option value="ya">Ya</option>
+                            <option value="tidak" selected="selected">Tidak</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-8 s_website_form_field s_website_form_required" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment114">
+                            <span class="s_website_form_label_content">Berapa lama waktu yang Anda butuhkan untuk dapat bergabung dengan kami?</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                        <select id="recruitment114" class="form-group col-8 s_website_form_field form-control" name="availability">
+                            <option value="secepatnya">Secepatnya</option>
+                            <option value="1minggu">1 Minggu</option>
+                            <option value="2/3minggu">2/3 Minggu</option>
+                            <option value="1bulan">1 Bulan</option>
+                            <option value=">1bulan">>1 Bulan</option>
+                        </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group col-12 s_website_form_field s_website_form_required" data-type="char" data-name="Field">
+                    <div class="row s_col_no_resize s_col_no_bgcolor">
+                        <label class="col-form-label col-sm-auto s_website_form_label" style="width: 200px" for="recruitment115">
+                            <span class="s_website_form_label_content">Gaji yang diharapkan (Take Home Pay)</span>
+                            <span class="s_website_form_mark"> *</span>
+                        </label>
+                        <div class="col-sm">
+                            <input id="recruitment115" type="text" class="form-control s_website_form_input" name="salary_expected" />
+                        </div>
+                    </div>
+                </div>
+            </xpath>
+        </template>
+    </data>                       
+</odoo>
